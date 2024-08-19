@@ -25,7 +25,9 @@ function Category() {
                     <div key={category.category}>
                         <h2 className="text-lg font-bold">{category.category}</h2>
                         <div className="widget-container grid grid-cols-3 gap-4">
-                            {category.widgets.map((widget) => (
+                            {category.widgets.filter((wid) => {
+                                return wid.status === 'active';
+                            }).map((widget) => (
                                 <Widget key={widget?.name} widget={widget} />
                             ))}
                             <div className='bg-white p-4 py-10 rounded-lg shadow-lg w-[360px] flex justify-center items-center h-[300px]'>

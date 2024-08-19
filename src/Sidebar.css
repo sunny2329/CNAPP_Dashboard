@@ -89,11 +89,14 @@ body.no-scroll {
 }
 
 .sidebar {
-    z-index: 9999; /* Adjust as needed */
+    z-index: 9999;
+    /* Adjust as needed */
 }
 
-.overlay.active, .sidebar.active {
-    z-index: 10000; /* Make sure the overlay is also higher */
+.overlay.active,
+.sidebar.active {
+    z-index: 10000;
+    /* Make sure the overlay is also higher */
 }
 
 .modal-overlay {
@@ -103,7 +106,8 @@ body.no-scroll {
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.5);
-    z-index: 10000; /* Ensure it's above everything */
+    z-index: 10000;
+    /* Ensure it's above everything */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -115,7 +119,8 @@ body.no-scroll {
     border-radius: 8px;
     max-width: 400px;
     width: 100%;
-    z-index: 10001; /* Ensure it's above the overlay */
+    z-index: 10001;
+    /* Ensure it's above the overlay */
 }
 
 .modal-actions button {
@@ -123,4 +128,136 @@ body.no-scroll {
 }
 
 
+/* Sidebar.css */
 
+/* Checkbox Styling */
+.widget-list input[type="checkbox"] {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #1E3A8A;
+    border-radius: 4px;
+    display: inline-block;
+    margin-right: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.widget-list input[type="checkbox"]:checked {
+    background-color: #1E3A8A;
+    border-color: #1E3A8A;
+}
+
+.widget-list input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    transform: translate(-50%, -50%);
+    border-radius: 2px;
+}
+
+/* Widget Container Styling */
+.widget-list div {
+    display: flex;
+    align-items: center;
+    background-color: #F3F4F6; /* Light gray background */
+    border: 1px solid #E5E7EB; /* Light gray border */
+    padding: 0;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.widget-list div:hover {
+    background-color: #E5E7EB; /* Slightly darker gray on hover */
+}
+
+/* Label Styling */
+.widget-list label {
+    font-size: 14px;
+    color: #111827; /* Dark gray color for text */
+    margin-left: 5px;
+}
+
+/* Add Widget Button Styling */
+.widget-list button {
+    background-color: #1E3A8A; /* Primary blue color */
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.widget-list button:hover {
+    background-color: #3B82F6; /* Lighter blue on hover */
+}
+
+/* Modal Styling */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.modal-actions button {
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.modal-actions button:first-child {
+    background-color: #E5E7EB; /* Light gray for cancel */
+    color: #1E3A8A;
+    border: 1px solid #1E3A8A;
+}
+
+.modal-actions button:last-child {
+    background-color: #1E3A8A;
+    color: white;
+}
+
+
+/* Sidebar.css */
+
+/* Ensure each widget item is aligned correctly */
+.widget-item {
+    display: flex;
+    align-items: start;
+    padding: 8px;
+    margin-bottom: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Ensure checkbox and label have proper spacing */
+.widget-item input[type="checkbox"] {
+    margin-right: 8px;
+}
