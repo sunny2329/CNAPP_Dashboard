@@ -126,7 +126,7 @@ function Sidebar() {
                     </div>
                     <div className="">
                         {activeCategoryData ? (
-                            <div className='flex flex-col'>
+                            <div className='flex flex-col max-h-[70vh] overflow-scroll scrollbar-none' style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
                                 <div className='flex w-full justify-between items-center mb-5 mt-5 px-4'>
                                     <h1>{activeCategoryData.category}</h1>
                                     <div className="flex items-center mr-5">
